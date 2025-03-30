@@ -10,21 +10,4 @@ services:
       - "8000:8000"
     env_file:
       - .env  # Load environment variables from .env
-    depends_on:
-      - mysql  # Ensure MySQL starts first
 
-  mysql:
-    image: mysql:8.0
-    restart: always
-    environment:
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-
-volumes:
-  mysql_data:
