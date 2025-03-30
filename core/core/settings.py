@@ -180,3 +180,7 @@ REST_FRAMEWORK = {
 TOKEN_API = os.getenv("TOKEN_API")
 
 AUTH_USER_MODEL = "user.UserProfile"
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://nocode-core.onrender.com"
+]
