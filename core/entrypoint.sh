@@ -2,8 +2,8 @@
 
 # Run migrations
 echo "🚀 Running migrations..."
-python manage.py migrate admin auth contenttypes sessions socialaccount user account
-
+python manage.py migrate admin auth contenttypes sessions socialaccount account
+python manage.py migrate
 # Create superuser if not exists
 echo "👤 Checking for superuser..."
 python manage.py shell <<EOF
