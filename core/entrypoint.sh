@@ -2,7 +2,7 @@
 
 # Run migrations
 echo "🚀 Running migrations..."
-python manage.py migrate account admin auth contenttypes sessions socialaccount
+python manage.py migrate admin auth contenttypes sessions socialaccount user account
 
 # Create superuser if not exists
 echo "👤 Checking for superuser..."
